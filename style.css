@@ -1,13 +1,17 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+:root{
+    --textcolor: #420000;
+}
+
 .grid-2{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 
 img {
-    width: 2%;
+    width: 60%;
     height: auto;
 }
 
@@ -18,8 +22,8 @@ body{
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-    color: #7A7C80;
-
+    color: var(--textcolor);
+    height: 100vh;
 }
 
 h2,.white{
@@ -27,12 +31,12 @@ h2,.white{
 }
 
 a{
-    color: #7A7C80;
+    color: var(--textcolor);
     text-decoration: none;
 }
 /* section 1 */
 .section-1{
-    padding-top: 40vh;
+    padding-top: 20vh;
     text-align: center;
 }
 
