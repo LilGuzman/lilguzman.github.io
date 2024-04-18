@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root{
-    --textcolor: #420000;
+    --textcolor: #d1d1d1; /* Light Gray */
+    --primary-color: #7e5200; /* Dark Orange */
+    --secondary-color: #005a8d; /* Dark Blue */
+    --link-color: #007BFF; /* Lighter Blue for links */
+    --space-background: #002855; /* Dark Blue */
 }
 
 .grid-2{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 img {
@@ -19,31 +23,39 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-    color: var(--textcolor);
+    position: relative;
     height: 100vh;
+    color: var(--textcolor);
+    background-image: linear-gradient(to right top, var(--space-background), #979797, #676767, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #676767, #979797, var(--space-background));
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
-h2,.white{
-    color: #fff;
+h2, .white{
+    color: var(--primary-color); /* Dark Orange */
 }
 
 a{
-    color: var(--textcolor);
+    color: var(--link-color); /* Lighter Blue for links */
     text-decoration: none;
 }
+
+/* Accent with space color */
+h2, .white, a:hover, .caption, ul {
+    color: var(--secondary-color); /* Dark Blue */
+}
+
 /* section 1 */
 .section-1{
     padding-top: 20vh;
     text-align: center;
+    padding-right: 5%;
 }
 
 .section-1 p{
     font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
+    color: var(--textcolor); /* Light Gray */
+    margin: 0;
 }
 
 .section-1 h2{
@@ -55,75 +67,39 @@ a{
     font-size: 1.5rem;
     padding: 10px;
 }
+
 /* section 2 */
 .section-2{
     padding-top: 10vh;
     width: 70%;
+    padding-right: 5%;
 }
 
 .section-2 h2{
     font-size: 1.7rem;
     margin-bottom: 10px;
+    color: var(--primary-color); /* Dark Orange */
 }
 
 .section-2 p{
     font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
+    color: var(--textcolor); /* Light Gray */
+    margin: 0;
 }
 
 .section-2 a{
-    /* display: block; */
     padding: 5px;
-    /* font-size: 1.2rem; */
-    padding-left: 0;
     width: 100px;
+    color: var(--link-color); /* Lighter Blue for links */
 }
 
-.caption {
-    font-size: 0.7rem;
-}
-/* animations / utilities */
-.section-2 a:hover{
-    font-size: 1.3rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-1 a:hover{
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.white:hover{
-    position: relative;
-    padding-left: 10px;
-}
-
-ul.book {
-    list-style: "📚   ";
-    list-style-position: outside;
-}
-
-ul.phone {
-    list-style: "📱   ";
-    list-style-position: outside;
-}
-
-ul.paper {
-    list-style: "⚡   ";
-    list-style-position: outside;
-}
-
-/* media queres */
-@media(max-width:780px){
+/* media queries */
+@media(max-width: 780px){
     .grid-2{
         grid-template-columns: 1fr;
     }
     .section-1{
-        padding:0;
+        padding: 0;
         padding-top: 5rem;
     }
     .section-2{
