@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root{
-    --textcolor: #d1d1d1; /* Light Gray */
+    --textcolor: #361515; /* Light Gray */
     --primary-color: #7e5200; /* Dark Orange */
-    --secondary-color: #005a8d; /* Dark Blue */
-    --link-color: #007BFF; /* Lighter Blue for links */
+    --secondary-color: #580000; /* Dark Blue */
+    --link-color: #a6ff00; /* Lighter Blue for links */
     --space-background: #002855; /* Dark Blue */
 }
 
